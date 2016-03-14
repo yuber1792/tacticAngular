@@ -1,0 +1,17 @@
+<ion-view view-title="Recepción">
+  <ion-content>   
+    <div class="list" ng-if="loginData.login == 'ok'">
+	    <a ng-repeat="orden  in ordenes" class="item item-thumbnail-left" href="#">
+	      <img src="./img/tactic.png">
+	      <h2>{{orden.placa}}</h2>
+	      <p>{{orden.estadoTexto}}</p>
+	        <button class="button-positive" ng-click="cargaReporte(orden.id,orden.token)">
+     			 <i class="ion-eye" style=" font-size: 20px"></i>
+    		</button>
+    		 <button class="button-positive">
+     			 <i class="ion-edit" style=" font-size: 20px"></i>
+    		</button>    		
+	    </a>
+	</div>
+  </ion-content>
+</ion-view>
